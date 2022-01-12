@@ -1,12 +1,43 @@
 body {
-	background-color: black;
+	background-color: #F7CDFE;
 	color: white;
-	font-family: 'Monserrat', sans-serif;
-
+	font-family: 'Luxurious Roman', cursive;
+	font-size:  20px;
+	text-align: center;
+	background-position: center top;
+	background-repeat:  no-repeat;
+	background width:  100% auto;
 }
 
 a {
+	font-family:  'Spline Sans';
+	font-size:  14px;
 	color:  white;
+	text-decoration: underline;
+	transition:  800ms ease all;
+}
+
+a:hover{
+	color: mediumpurple;
+	transition:  800ms ease all;
+}
+
+#header{ 
+		width:  100%;
+		display:  flex;
+		padding-left:  20px;
+		padding-right:  20px;
+		justify-content:  space-between;
+		height:  30%;
+		background-image: 'https://i.ibb.co/zRSVFw4/sunrise.jpg';
+}
+
+#container{
+	flex-direction:  row;
+	width:  100%;
+	padding: 5% 10% 5% 60%;
+	height:  40%;
+	background: #CAA5EA;
 }
 
 h1 {
