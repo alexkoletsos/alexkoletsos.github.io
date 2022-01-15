@@ -1,12 +1,12 @@
 body {
-	background-color: #F7CDFE;
-	color: white;
+	color: black;
 	font-family: 'Luxurious Roman', cursive;
-	font-size:  20px;
+	font-size: 25px;
 	text-align: center;
 	background-position: center top;
 	background-repeat:  no-repeat;
 	background width:  100% auto;
+	background-color: #DFEFF7;
 }
 
 a {
@@ -18,36 +18,302 @@ a {
 }
 
 a:hover{
-	color: mediumpurple;
+	color: lightblue;
 	transition:  800ms ease all;
 }
 
 #header{ 
-		width:  100%;
+		max-width:  100%;
 		display:  flex;
-		padding-left:  20px;
-		padding-right:  20px;
+		margin-left:  20px;
+		margin-right:  20px;
 		justify-content:  space-between;
-		height:  30%;
-		background-image: 'https://i.ibb.co/zRSVFw4/sunrise.jpg';
+		height:  15%;
+}
+
+#header h1{
+		margin-left: 20px;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.resume-button{
+		font-family:  'Helvetica';
+		font-weight:  400;
+		letter-spacing:  1px;
+		border-radius:  25px;
+		border:  1px solid black;
+		background:  transparent;
+		width:  170px;
+		height: 50px;
+		transition: 800ms ease all;
+		margin-right: 20px;
+		}
+
+.resume-button a{
+	color:  black;
+
+}
+
+.resume-button:hover {
+	color: white;
+	background: black;
+	transition: 800ms ease all;
+}
+
+.resume-button a:hover {
+	color: white;
+	transition: 800ms ease all;
+}
+
+canvas{
+  filter: blur(1px);
+}
+
+.bioBox{
+	width: 60%;
+	line-height: 24px;
+	height: auto;
+	flex-grow: 1;
 }
 
 #container{
-	flex-direction:  row;
-	width:  100%;
-	padding: 5% 10% 5% 60%;
-	height:  40%;
-	background: #CAA5EA;
+	position: absolute;
+	flex-direction: row;
+	float: left;
+	width: 100%;
+	height: 70%;
+	margin: 0 auto;
+	background-color: transparent;
+	display: flex;
+}
+
+.column-left{
+	float: left;
+	width: 20%;
+	height: 70%;
+	border-radius: 20px;
+	font-size: 14px;
+	padding-top: 2%;
+	padding-left: 3%;
+	background: transparent;
+	margin-right: 30px;
+}
+
+.column-middle{
+	width: 25%;
+	height: 50%;
+	border-radius: 20px;
+	font-size: 14px;
+	padding: 3%;
+	background:  transparent;
+	margin: 20px;
+}
+
+.column2{
+	width: 20%;
+	height: 30%;
+	border-radius: 10px;
+	font-size: 14px;
+	padding: 3%;
+	background:  transparent;
+	margin: 20px;
+	margin-left: 4.5%;
+	display: inline;
+	border-radius: 15px;
+	background-color: #FECFB8;
+}
+
+
+.column-middle:hover {
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.column-right:hover {
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.column2:hover {
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.personalimage{
+	float: "left";
+	height: 340px;
+	width: 300px; 
+	border-radius: 60%
+}
+
+.image{
+	width: 110px;
+	height: 110px ;
+	float: left;
+}
+
+.image2{
+	width: 60px;
+	height: 60px ;
+	float: left;
+	margin-left: 23px;
+}
+
+.image3{
+	width: 60px;
+	height: 60px ;
+	float: left;
+	margin-left: 23px;
+	margin-top: 30px;
+}
+
+
+.text{
+	display: inline;
+
+}
+
+#container2{
+	position: relative;
+	flex-direction: row;
+	max-width: 100%;
+	height: 70%;
+	margin-top: 30%;
+	background-image: url(../sunrise.jpeg);
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-width: 100% auto;
+	display: flex;
+	border-radius: 15px;
+	transition: 800ms ease all;
+	transition: box-shadow .3s;
+	color:  black;
+	font-family:  'Spline Sans';
+	font-size: 20px;
+
+}
+#container2:hover{
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.box2{
+
+	width: 25%;
+	height: 50%;
+	border-radius: 20px;
+	font-size: 18px;
+	padding: 3%;
+	background:  transparent;
+	margin-left: 35%;
+	margin-top: 10%;
+	font-family:  'Helvetica';
+	font-weight:  400;
+
 }
 
 h1 {
-	color:  blue;
-	font-family: 'Luxurious Roman', cursive;
+	color:  black;
+	font-family:  'Spline-sans';
+	font-size: 20px;
+	float: left;
+	font-weight: 400;
 }
 
+h2 {
+	color:  black;
+	font-family: 'Luxurious Roman', cursive;
+	font-size: 35px;
+}
+
+h3 {
+	color:  black;
+	font-family:  'Spline-sans';
+	font-size: 25px;
+	font-weight: 400;
+	float: top;
+}
+
+h4 {
+	color:  black;
+	font-family:  'Spline-sans';
+	font-size: 40px;
+	float: left;
+	font-weight: 400;
+
+}
+
+h5 {
+	color:  black;
+	font-family: 'Luxurious Roman', cursive;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+
 p{
-	font-size: 13px;
-	font-family:  'Monserrat', sans-serif;
-	color:  #B600FF;
+	font-size: 30px;
+	font-family:  'Luxurious Roman', cursive;
+	color:  blue;
+
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+.responsive {
+  width: auto;
+  height: auto;
+}
+
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 
 }

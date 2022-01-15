@@ -9,29 +9,171 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat&family=Moon+Dance&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="./js/index.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript">
+// <![CDATA[
+var news=Array("♔ first-gen student at columbia college");
+var cursor="_"; // set cursor
+var delay=12; // seconds between each news item
+
+/***************************\
+* News Ticker Text Effect   *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+var newsp, cursp, flash, item=0;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(teleprint);
+
+function teleprint () { if (document.getElementById) {
+  var span=document.getElementById("news");
+  while (span.childNodes.length) span.removeChild(span.childNodes[0]);
+  delay*=1000;
+  newsp=document.createElement("span");
+  cursp=document.createElement("span");
+  cursp.appendChild(document.createTextNode(String.fromCharCode(160)+cursor));
+  span.appendChild(newsp);
+  span.appendChild(cursp);
+  ticker();
+}}
+
+function ticker() {
+  var i;
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[item].substring(0,1)));
+  for (i=1; i<news[item].length; i++) setTimeout('newsp.firstChild.nodeValue="'+news[item].substring(0, i+1)+'"', 100*i);
+  if (news[item].indexOf("www")!=-1) setTimeout('linkit('+item+')', 100*i);
+  setTimeout('flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\'visible\')?\'hidden\':\'visible\'", 234)', 100*i)
+  setTimeout('clearInterval(flash)', delay);
+  setTimeout('cursp.style.visibility="visible"', delay);
+  setTimeout('ticker()', delay);
+  item=++item%news.length;
+}
+
+function linkit(q) {
+  var a,p,e,l;
+  p=news[q].indexOf("www");
+  e=news[q].indexOf(" ", p);
+  if (e==-1) e=news[q].length;
+  l=news[q].substring(p, e);
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[q].substring(0, p)));
+  a=document.createElement("a");
+  a.href="http://"+l;
+  a.appendChild(document.createTextNode(l));
+  newsp.appendChild(a);
+  newsp.appendChild(document.createTextNode(news[q].substring(e)));
+}
+// ]]>
+</script>
 
 	</head>
 
 	<body>
-
-		<div id="header">
-		<h1>  Alexandra Koletsos </h1>
+		<div id= "header">
+		<h1>  ALEXANDRA KOLETSOS </h1>
+		<button class="resume-button"> <a target="_blank" href="Alexandra Koletsos resume.pdf">RÉSUMÉ</a></button>
+		</div>
+		<div id="container">
+			<div class = "column-left">
+		<img class = "personalimage" src="https://i.ibb.co/373gwKr/IMG-1236.jpg"/>
+	</div>
+			<div class = "column-middle">
+				<div class = "text">
+				<p id = "news"> ♔ first-gen student at columbia college</p>
+			</div>
+				<div class = "text">
+				<p id = "news"> 📍	from norwalk,ct </p>
+			</div>
+			<div class = "text">
+				<a target="_blank" href="https://www.linkedin.com/in/alexandra-koletsos-a09566227/"><p id = "news">🔗	my linkedin</p></a>
+			</div>
 		</div>
 
-		<img src="https://i.ibb.co/373gwKr/IMG-1236.jpg" height = 300px />
+			<div class = "column-middle">
+				<h2> about me ! </h2>
+				<h5>Hello! I am a first-gen student at Columbia University pursuing a B.A. in <mark>Computer Science – Mathematics</mark> with a possible concentration in Hispanic Studies. I am interested in the intersection of tech and sustainability and would like to explore ways to make tech more accessible for people in low-income communities. </h5>
+			</div>
+		</div>
 
-		<p> This is a <b>paragraph!</b>
-			<u> underline </u>
-			<i> itallics </i>
-		</p>
+		<div id="container2">
+			<div class = "box2">
+				<a name="abme"></a>
+				<a href = "#abme"><h1>more about me...</h1><br></br></a>
+				<a name="passions"></a>
+				<a href = "#passions"><h1>my passions</h1><br></br></a>
+				<a name="projects"></a>
+				<a href = "#projects"><h1>my projects</h1><br></br></a>
+			</div>
 
-		<a href="https://www.linkedin.com/in/alexandra-koletsos-a09566227/">
-		LinkedIn</a>
+		</div>
+		<h1>
+			
+				
+			<a href = "#passions"></a>
+			<a href = "#abme"><h4>more about me...</h4><br></br><br></br><br></br><br></br></a>
+			<div id="container">
+				<div class = "column2">
+					<h3>my most recent playlist!</h3>
+					<iframe src="https://open.spotify.com/embed/playlist/2JYt5Oj4HwhVCw7J0Va1q7" width="280" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+				</div>
+				<div class = "column2">
+					<font size="+2">quick recap 📝 </font>
+					<br></br>
+					I grew up in a household of nine: five older siblings and one younger. Seeing how hard my parents worked to raise me and my siblings,
+					I became passionate about learning and knew that with my own hard work I would be able to pursue a post-secondary education. Although 
+					I am not yet very experienced in CS, I hope to gain educational and professional experience at Columbia.
+				</div>
+				<div class = "column2">
+					<font size="+2">currently...⏰ </font>
+					<br></br>
+					<font size="+1">✧ teaching GED math at CUCI</font>
+					<br></br>
+					<font size="+1">✧ watching Breaking Bad</font>
+					<br></br>
+					<font size="+1">✧ beginning my CS portfolio</font>
 
-		hello! testing out my body for css
+				</div>
+				
+			</div>
+
+
+		</h1>
+
+		
+ </div>
+
+
 
 	</body>
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 30px;
+}
+</style>
 
+<div class="footer">
+  <a href="mailto:akoletsos.ak@gmail.com" target="_blank" rel="noopener"><h3>✉ let's connect!</h3></a> 
+</div>
 
 </html>
